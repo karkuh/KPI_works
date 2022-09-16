@@ -1,0 +1,12 @@
+Назва міста, Вага яку треба вигрузити в місто,Зєднанні міста,Довжина доріг до з'єднаних міст;
+Lutsk,200,Lviv;Rivne,150;73;
+Lviv,400,Uzhhorod;Ivano-Frankivsk;Ternopil;Rivne;Lutsk,248;133;145;211;150;
+Rivne,500,Lutsk;Lviv;Ternopil;Khmelnitsky;Zhytomyr,73;211;153;195;188;
+Uzhhorod,700,Lviv;Ivano-Frankivsk,248;268;
+Ivano-Frankivsk,900,Uzhhorod;Lviv;Ternopil;Chernivtsi,268;133;134;136;
+Ternopil,800,Lviv;Rivne;Khmelnitsky;Chernivtsi;Ivano-Frankivsk,145;153;111;172;134;
+Zhytomyr,400,Rivne;Khmelnitsky;Vinnytsia;Kyiv,188;217;129;151;
+Khmelnitsky,1000,Ternopil;Rivne;Zhytomyr;Vinnytsia;Chernivtsi,111;195;217;120;188;
+Chernivtsi,600,Ivano-Frankivsk;Ternopil;Khmelnitsky;Vinnytsia,136;172;188;272;
+Kyiv,300,Zhytomyr;Vinnytsia,151;273;
+Vinnytsia,300,Chernivtsi;Khmelnitsky;Zhytomyr;Kyiv,272;120;129;273;
