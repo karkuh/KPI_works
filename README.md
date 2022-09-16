@@ -62,8 +62,9 @@
 <td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Reports">☠</a></td>
 <td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Works">🤓</a></td>
 </tr>
-
-
-
 </tbody>
 </table>
+
+
+
+
