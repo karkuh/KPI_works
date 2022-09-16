@@ -1,0 +1,274 @@
+Turbo Assembler	 Version 3.1	    04/03/22 18:11:50	    Page 1
+KARKUS~1.ASM
+
+
+
+      1				     title lab1.asm
+      2
+      3	0000			     .MODEL tiny
+      4	0000			     .DATA
+      5
+      6				     ;byte
+      7	0000  00 FF		     i db 0, 255
+      8	0002  01		     i1	db -255;не входить в діапазон
+      9	0003  80 7F		     ii	db -128, 127
+     10
+     11				     ; числа відповідно до варіанту
+     12				     ;byte
+     13	0005  97		     a db 151
+     14	0006  79		     a11 db 121
+     15	0007  87		     a22 db -121
+     16
+     17
+     18				     ;word
+     19	0008  FF01		     r0	dw -255
+     20	000A  0000 FFFF		     r dw 0, 65535
+     21	000E  FFFF 8001		     r1	dw -1, -32767
+     22	0012  0001 7FFF		     r2	dw 1, 32767
+     23	0016  0001		     r3	dw -65535 ;не	входить в діапазон
+     24	0018  FFFF0001		     r4	dd -65535
+     25
+     26
+     27				     ; числа відповідно до варіанту
+     28
+     29				     ;word
+     30	001C  FF69		     b0	dw -151
+     31	001E  06CC		     b dw 1740
+     32	0020  06AE		     b1	dw 1710
+     33	0022  F952		     b2	dw -1710
+     34	0024  F934		     b3	dw -1740
+     35
+     36
+     37
+     38
+     39
+     40	0026  F8		     k db -8
+     41	0027  F6		     db	-10
+     42	0028  FFF6		     dw	-10
+     43	002A  0F		     db	15
+     44	002B  F1		     db	-15
+     45	002C  FE		     db	0feh
+     46	002D  00		     db	0b12h
+**Error** KARKUS~1.ASM(46) Value out of	range
+     47				     ;не входить в діапазон
+     48	002E  66		     db	01100110b
+     49	002F  008B		     dw	10001011b
+     50	0031  000D		     dw	13
+     51	0033  3066		     dw	'0f'
+     52	0035  0245		     dw	0245h
+     53	0037  0005		     dw	0101b
+     54	0039  0A32		     dw	0a32h
+     55	003B  0F45		     dw	0f45h
+     56	003D  0037		     dw	55
+Turbo Assembler	 Version 3.1	    04/03/22 18:11:50	    Page 2
+KARKUS~1.ASM
+
+
+
+     57	003F  0C47		     dw	0c47h
+     58	0041  00AF		     dw	0afh
+     59	0043  00000004 00000008	  +  dd	4, 8, 0ah, 0ffh
+     60	      0000000A 000000FF
+     61	0053  FFF1		     dw	-15
+     62	0055  F0		     db	-16
+     63	0056  FFF0		     dw	-16
+     64	0058  7F		     r db 127
+**Error** KARKUS~1.ASM(63) Symbol already different kind: R
+     65	0059  81		     q	db -127
+     66	005A  FF81		     t1	dw -127
+     67	005C  80		     db	128
+     68	005D  80		     i db -128
+**Error** KARKUS~1.ASM(67) Symbol already defined elsewhere: I
+     69	005E  FF80		     i1	dw -128
+**Error** KARKUS~1.ASM(68) Symbol already different kind: I1
+     70				     ;???
+     71	0060  7F		     w db -129
+     72	0061  FF7F		     p dw -129
+     73	0063  FF		     db	255
+     74				     ;???
+     75	0064  01		     db	-255
+     76				     ;не входить в діапазон
+     77	0065  00		     db	256
+**Error** KARKUS~1.ASM(76) Value out of	range
+     78	0066  0100		     dw	256
+     79				     ;змінна q вже іншого типу
+     80	0068  8000		     q dw -32768
+**Error** KARKUS~1.ASM(79) Symbol already different kind: Q
+     81	006A  FFFFFFFF8000	     rr1 df -32768
+     82	0070  FFFF8000		     zz1 dd -32768
+     83	0074  7FFF		     j dw 32767
+     84	0076  FFFF		     a dw 65535
+**Error** KARKUS~1.ASM(83) Symbol already different kind: A
+     85	0078  0001		     dw	-65535
+     86	007A  7FFE7960		     dd	-2147583648
+     87	007E  8001869F		     dd	2147583647
+     88	0082  FFFFFFFF7FFE7960	     dq	-2147583648
+     89	008A  000000008001869F	     dq	2147583647
+     90	0092  00A8		     ll	dw 10101000b
+     91				     ; число b12 не входить в діапазон
+     92	0094  0C E2 84 96 00	     ff	db 12, "№", 0b12h
+**Error** KARKUS~1.ASM(91) Value out of	range
+     93	0099  000C 0000	0B12	     f1	dw 12, "№", 0b12h
+**Error** KARKUS~1.ASM(92) Value out of	range
+     94	009F  05		     g5	db 0101b
+     95				     ;SS - сегмент стека виконаної	програми.Існують	певні  +
+     96				     обмеження	відносно застосування регістрів		    +
+     97				     загального призначення як базових або індексних	    +
+     98				     при формуванні ефективної адреси:– регістр ESP не	    +
+     99				     можна	використовувати як індексний регістр:
+    100
+    101
+    102
+    103	00A0  0005		     ss	dw 00000101b
+**Error** KARKUS~1.ASM(98) Symbol already different kind: SS
+    104	00A2  000000000000001A	     xx	dq 26
+Turbo Assembler	 Version 3.1	    04/03/22 18:11:50	    Page 3
+KARKUS~1.ASM
+
+
+
+    105	00AA  0F45 0037	0042	     c1	dw 0f45h, 55, 66
+    106	00B0  8F		     a1	db -113
+    107	00B1  FF8F		     a2	dw -113
+    108	00B3  61		     ii	db -159
+**Error** KARKUS~1.ASM(103) Symbol already defined elsewhere: II
+    109	00B4  A7		     s1	db -89
+    110	00B5  FFA7		     ss5 dw -89
+    111	00B7  A4		     s2	db -92
+    112	00B8  FF19		     s3	dw -231
+    113	00BA  73 69 67 6D 61	     a11 db "sigma"
+**Error** KARKUS~1.ASM(108) Symbol already defined elsewhere: A11
+    114				     ;через те що перед числом e301	не поставили	нуль, тобто+
+    115				     не оголошено що це число.
+    116	00BF  0000		     a22 dw e301h
+**Error** KARKUS~1.ASM(110) Symbol already different kind: A22
+    117	00C1  0C		     a33 db 12
+    118	00C2  0006r		     a55 dw offset a11
+    119	00C4  000D		     a66 dw 13
+    120	00C6  FF85		     gg	dw -123
+    121	00C8  FFF7		     hh	dw -9
+    122
+    123
+    124
+    125
+    126
+    127	00CA  000C		     ss	dw 12
+**Error** KARKUS~1.ASM(121) Symbol already different kind: SS
+    128	00CC  000C		     ds	dw 12
+**Error** KARKUS~1.ASM(122) Symbol already different kind: DS
+    129
+    130	00CE  000C		     cs	dw 12
+**Error** KARKUS~1.ASM(124) Symbol already different kind: CS
+    131	00D0  000C		     es	dw 12
+**Error** KARKUS~1.ASM(125) Symbol already different kind: ES
+    132	00D2  000C		     fs	dw 12
+*Warning* KARKUS~1.ASM(126) Reserved word used as symbol: FS
+    133	00D4  0C		     gs	db 12
+*Warning* KARKUS~1.ASM(127) Reserved word used as symbol: GS
+    134
+    135
+    136				     end
+Turbo Assembler	 Version 3.1	    04/03/22 18:11:50	    Page 4
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "04/03/22"
+??FILENAME			  Text	 "KARKUS~1"
+??TIME				  Text	 "18:11:50"
+??VERSION			  Number 030A
+@32BIT				  Text	 0
+@CODE				  Text	 DGROUP
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _DATA
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 KARKUS~1
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 1
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+A				  Byte	 DGROUP:0005
+A1				  Byte	 DGROUP:00B0
+A11				  Byte	 DGROUP:0006
+A2				  Word	 DGROUP:00B1
+A22				  Byte	 DGROUP:0007
+A33				  Byte	 DGROUP:00C1
+A55				  Word	 DGROUP:00C2
+A66				  Word	 DGROUP:00C4
+B				  Word	 DGROUP:001E
+B0				  Word	 DGROUP:001C
+B1				  Word	 DGROUP:0020
+B2				  Word	 DGROUP:0022
+B3				  Word	 DGROUP:0024
+C1				  Word	 DGROUP:00AA
+F1				  Word	 DGROUP:0099
+FF				  Byte	 DGROUP:0094
+FS				  Word	 DGROUP:00D2
+G5				  Byte	 DGROUP:009F
+GG				  Word	 DGROUP:00C6
+GS				  Byte	 DGROUP:00D4
+HH				  Word	 DGROUP:00C8
+I				  Byte	 DGROUP:0000
+I1				  Byte	 DGROUP:0002
+II				  Byte	 DGROUP:0003
+J				  Word	 DGROUP:0074
+K				  Byte	 DGROUP:0026
+LL				  Word	 DGROUP:0092
+P				  Word	 DGROUP:0061
+Q				  Byte	 DGROUP:0059
+R				  Word	 DGROUP:000A
+R0				  Word	 DGROUP:0008
+R1				  Word	 DGROUP:000E
+R2				  Word	 DGROUP:0012
+R3				  Word	 DGROUP:0016
+R4				  Dword	 DGROUP:0018
+RR1				  Pword	 DGROUP:006A
+S1				  Byte	 DGROUP:00B4
+S2				  Byte	 DGROUP:00B7
+Turbo Assembler	 Version 3.1	    04/03/22 18:11:50	    Page 5
+Symbol Table
+
+
+
+S3				  Word	 DGROUP:00B8
+SS5				  Word	 DGROUP:00B5
+T1				  Word	 DGROUP:005A
+W				  Byte	 DGROUP:0060
+XX				  Qword	 DGROUP:00A2
+ZZ1				  Dword	 DGROUP:0070
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  16  00D5 Word	  Public  DATA
+  _TEXT				  16  0000 Word	  Public  CODE
+Turbo Assembler	 Version 3.1	    04/03/22 18:11:50	    Page 6
+Error Summary
+
+
+
+**Error** KARKUS~1.ASM(46) Value out of	range
+**Error** KARKUS~1.ASM(63) Symbol already different kind: R
+**Error** KARKUS~1.ASM(67) Symbol already defined elsewhere: I
+**Error** KARKUS~1.ASM(68) Symbol already different kind: I1
+**Error** KARKUS~1.ASM(76) Value out of	range
+**Error** KARKUS~1.ASM(79) Symbol already different kind: Q
+**Error** KARKUS~1.ASM(83) Symbol already different kind: A
+**Error** KARKUS~1.ASM(91) Value out of	range
+**Error** KARKUS~1.ASM(92) Value out of	range
+**Error** KARKUS~1.ASM(98) Symbol already different kind: SS
+**Error** KARKUS~1.ASM(103) Symbol already defined elsewhere: II
+**Error** KARKUS~1.ASM(108) Symbol already defined elsewhere: A11
+**Error** KARKUS~1.ASM(110) Symbol already different kind: A22
+**Error** KARKUS~1.ASM(121) Symbol already different kind: SS
+**Error** KARKUS~1.ASM(122) Symbol already different kind: DS
+**Error** KARKUS~1.ASM(124) Symbol already different kind: CS
+**Error** KARKUS~1.ASM(125) Symbol already different kind: ES
+*Warning* KARKUS~1.ASM(126) Reserved word used as symbol: FS
+*Warning* KARKUS~1.ASM(127) Reserved word used as symbol: GS
+

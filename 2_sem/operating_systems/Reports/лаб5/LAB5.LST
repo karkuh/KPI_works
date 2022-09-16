@@ -1,0 +1,86 @@
+Turbo Assembler	 Version 3.1	    04/14/22 10:45:45	    Page 1
+lab5.asm
+
+
+
+      1	0000			     .MODEL SMALL
+      2	0000			     .STACK 100H
+      3	0000			     .DATA
+      4
+      5
+      6	0000			     Data segment
+      7	0000  36 34 37 41 37 39	31+		     message db	'647A791MKZS123T $'
+      8	      4D 4B 5A 53 31 32	33+
+      9	      54 20 24
+     10	0011  0D 0A 24				     CR_LF db 0dh,0ah, '$'
+     11
+     12	0014			     Data ends
+     13	0000			     .CODE
+     14	0000			     Code segment
+     15					     Assume CS:Code,DS:Data
+     16	0000			     START:
+     17	0000  B8 0000s			     mov AX, Data
+     18	0003  8E D8			     mov DS, AX
+     19	0005  B4 40			     mov AH, 40h
+     20	0007  BB 0001			     mov BX, 1
+     21	000A  B9 000F			     mov CX, 15
+     22	000D  BA 0000r			     lea DX, message
+     23	0010  CD 21			     int 21h
+     24	0012  B4 09			     mov AH, 9h
+     25	0014  BA 0011r			     mov DX, offset CR_LF
+     26	0017  CD 21			     int 21h
+     27
+     28
+     29	0019  C6 06 0003r 20		     mov message+3," "
+     30	001E  C6 06 0007r 20		     mov message+7," "
+     31	0023  C6 06 0008r 20		     mov message+8," "
+     32	0028  C6 06 0009r 20		     mov message+9," "
+     33	002D  C6 06 000Ar 20		     mov message+10," "
+     34	0032  C6 06 000Er 20		     mov message+14," "
+     35
+     36	0037  B4 40			     mov AH, 40h
+     37	0039  BB 0001			     mov BX, 1
+     38	003C  B9 000F			     mov CX, 15
+     39	003F  BA 0000r			     lea DX, message
+     40	0042  CD 21			     int 21h
+     41	0044  B4 4C			     mov AH, 4ch
+     42	0046  CD 21			     int 21h
+     43	0048			     Code ends
+     44					     end START
+Turbo Assembler	 Version 3.1	    04/14/22 10:45:45	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "04/14/22"
+??FILENAME			  Text	 "lab5	  "
+??TIME				  Text	 "10:45:45"
+??VERSION			  Number 030A
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 LAB5
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+CR_LF				  Byte	 DATA:0011
+MESSAGE				  Byte	 DATA:0000
+START				  Near	 CODE:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+CODE				  16  0048 Para	  none
+DATA				  16  0014 Para	  none
+DGROUP				  Group
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0000 Word	  Public  DATA
+_TEXT				  16  0000 Word	  Public  CODE
+

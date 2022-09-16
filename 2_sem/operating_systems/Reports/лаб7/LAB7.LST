@@ -1,0 +1,157 @@
+Turbo Assembler	 Version 3.1	    04/26/22 22:27:25	    Page 1
+lab7.asm
+
+
+
+      1	0000			     MODEL small
+      2	0000			     .Stack 100h
+      3	0000			     DATA segment
+      4	0000  0001			     a dw 1
+      5	0002  0002			     b dw 2
+      6	0004  ????			     x dw ?
+      7
+      8	0006  45 72 72 6F 72 21	20+	     String db 'Error! Division	by zero.$'
+      9	      44 69 76 69 73 69	6F+
+     10	      6E 20 62 79 20 7A	65+
+     11	      72 6F 2E 24
+     12	001F			     DATA ends
+     13
+     14	0000			     CODE segment
+     15					     Assume CS:CODE, DS:DATA
+     16	0000  B8 0000s		     Start:  mov AX, DATA
+     17	0003  8E D8			     mov ds, AX
+     18
+     19	0005  A1 0000r			     mov AX, a
+     20	0008  3B 06 0002r		     cmp AX, b
+     21	000C  7F 0D			     jg	@onecond
+     22	000E  7C 30			     jl	@twocond
+     23
+     24					     ;a==b
+     25					     ;x	= -4
+     26	0010  33 C0			     xor AX, AX
+     27	0012  B8 FFFC			     mov AX, -4
+     28	0015  A3 0004r			     mov x, AX
+     29	0018  EB 45 90			     jmp @otv
+     30
+     31					     ;a>b
+     32					     ;x	= (a^3+b)/a
+     33	001B			     @onecond:
+     34	001B  33 C0			     xor AX, AX
+     35	001D  A1 0000r			     mov AX, a
+     36	0020  3D 0000			     cmp AX, 0
+     37	0023  74 6A			     je	@error
+     38
+     39	0025  A1 0000r			     mov AX, a
+     40	0028  99			     cwd
+     41	0029  F7 2E 0000r		     imul a
+     42	002D  99			     cwd
+     43	002E  F7 2E 0000r		     imul a
+     44	0032  13 06 0002r		     adc AX,b
+     45	0036  F7 3E 0000r		     idiv a
+     46	003A  A3 0004r			     mov x, AX
+     47	003D  EB 20 90			     jmp @otv
+     48
+     49					     ;a<b
+     50					     ;x	= (3*a-5)/b
+     51	0040			     @twocond:
+     52	0040  33 C0			     xor AX, AX
+     53	0042  A1 0002r			     mov AX, b
+     54	0045  3D 0000			     cmp AX, 0
+     55	0048  74 45			     je	@error
+     56	004A  B8 0003			     mov AX, 3
+     57	004D  F7 2E 0000r		     imul a
+Turbo Assembler	 Version 3.1	    04/26/22 22:27:25	    Page 2
+lab7.asm
+
+
+
+     58	0051  1D 0005			     sbb AX, 5
+     59	0054  99			     cwd
+     60	0055  F7 3E 0002r		     idiv b
+     61	0059  A3 0004r			     mov x, AX
+     62	005C  EB 01 90			     jmp @otv
+     63
+     64	005F  33 C0		     @otv:   xor AX, AX
+     65	0061  A1 0004r			     mov AX, x
+     66	0064  50			     push AX
+     67	0065  3D 0000			     cmp AX, 0
+     68	0068  79 09			     jns @plus
+     69
+     70	006A  B2 2D			     mov dl, '-'
+     71	006C  B4 02			     mov AH, 02h
+     72	006E  CD 21			     int 21h
+     73	0070  58			     pop AX
+     74	0071  F7 D8			     neg AX
+     75
+     76	0073  33 C9		     @plus:  xor CX, CX
+     77	0075  BB 000A			     mov BX, 10
+     78
+     79	0078  33 D2		     @unit:  xor DX, DX
+     80	007A  F7 F3			     div BX
+     81	007C  52			     push DX
+     82	007D  41			     inc CX
+     83	007E  85 C0			     test AX, AX
+     84	0080  75 F6			     jnz short @unit
+     85	0082  B4 02			     mov AH, 02h
+     86
+     87	0084  5A		     @vivod: pop DX
+     88	0085  80 C2 30			     add DL, 30h ; +30
+     89	0088  CD 21			     int 21h
+     90	008A  E2 F8			     loop @vivod
+     91	008C  EB 08 90			     jmp @end
+     92
+     93	008F  BA 0006r		     @error: mov DX, offset String
+     94	0092  B4 09			     mov AH, 09h
+     95	0094  CD 21			     int 21h
+     96
+     97	0096  B8 4C00		     @end:   mov AX, 4c00h
+     98	0099  CD 21			     int 21h
+     99	009B			     CODE ends
+    100				     end Start
+Turbo Assembler	 Version 3.1	    04/26/22 22:27:25	    Page 3
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "04/26/22"
+??FILENAME			  Text	 "lab7	  "
+??TIME				  Text	 "22:27:24"
+??VERSION			  Number 030A
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 CODE
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@END				  Near	 CODE:0096
+@ERROR				  Near	 CODE:008F
+@FILENAME			  Text	 LAB7
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@ONECOND			  Near	 CODE:001B
+@OTV				  Near	 CODE:005F
+@PLUS				  Near	 CODE:0073
+@STACK				  Text	 DGROUP
+@TWOCOND			  Near	 CODE:0040
+@UNIT				  Near	 CODE:0078
+@VIVOD				  Near	 CODE:0084
+@WORDSIZE			  Text	 2
+A				  Word	 DATA:0000
+B				  Word	 DATA:0002
+START				  Near	 CODE:0000
+STRING				  Byte	 DATA:0006
+X				  Word	 DATA:0004
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+CODE				  16  009B Para	  none
+DATA				  16  001F Para	  none
+DGROUP				  Group
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0000 Word	  Public  DATA
+_TEXT				  16  0000 Word	  Public  CODE
+

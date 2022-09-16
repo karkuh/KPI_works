@@ -1,0 +1,466 @@
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 1
+lab8.asm
+
+
+
+      1				     init_Data macro
+      2					     mov AX, @data
+      3					     mov DS,AX
+      4				     endm
+      5
+      6				     end_Prog macro
+      7					     mov AX, 4c00h
+      8					     int 21h
+      9
+     10				     endm
+     11
+     12				     positive_Number macro
+     13					     local makeDec,printDec
+     14					     xor CX, CX
+     15					     mov BX, 10
+     16					     makeDec:
+     17						     xor DX, DX
+     18						     div BX
+     19						     push DX
+     20						     inc CX
+     21						     test AX, AX
+     22						     jnz makeDec
+     23						     mov AH, 02h
+     24					     printDec:
+     25						     pop DX
+     26						     add DL, 30h
+     27						     int 21h
+     28						     loop printDec
+     29				     endm
+     30
+     31				     negative_Number macro
+     32					 push AX
+     33					 mov AH, 02h
+     34					 mov DL, '-'
+     35					 int 21h
+     36					 pop AX
+     37					 neg AX
+     38				     endm
+     39
+     40				     new_Line macro
+     41					 mov DX,offset CR_LF
+     42					 mov AH,09h
+     43					 int 21h
+     44				     endm
+     45
+     46				     probil macro
+     47					 mov AH, 02h
+     48					 mov DL, ' '
+     49					 int 21h
+     50				     endm
+     51
+     52				     print_Matrix macro
+     53				     local str,clm,pos,neg,nextElem
+     54
+     55					 xor SI,SI
+     56					 xor CX,CX
+     57					 mov CX,strn
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 2
+lab8.asm
+
+
+
+     58					 new_Line
+     59				     str:
+     60					 push CX
+     61					 mov CX,clmn
+     62				     clm:
+     63					 xor AX,AX
+     64					 mov AX, arr+si
+     65					 push CX
+     66					 cmp AX,0
+     67					 jns pos
+     68					 jmp neg
+     69				     pos:
+     70					 positive_Number
+     71					 jmp nextElem
+     72				     neg:
+     73					 negative_Number
+     74					 positive_Number
+     75					 jmp nextElem
+     76
+     77				     nextElem:
+     78					 probil
+     79					 add SI,2
+     80					 pop CX
+     81					 loop clm
+     82					 new_Line
+     83					 pop CX
+     84					 loop str
+     85				     endm
+     86
+     87				     task macro
+     88				     local cycle, skip
+     89
+     90				     xor BX,BX
+     91				     xor SI,SI
+     92				     mov CX,5
+     93				       cycle:
+     94					     push SI
+     95					     mov AX, arr_elem
+     96					     mov temp,CX
+     97					     push CX
+     98					     mov CX, strn
+     99					     sub CX, temp
+    100					     add CX,1
+    101					     cwd
+    102					     imul arr_elem
+    103					     mov arr_elem, AX
+    104					     push BX
+    105					     mov BX,3
+    106					     cmp temp,BX
+    107					     je	skip
+    108					     mov bx,temp
+    109					     sub BX,1
+    110					     add BX,BX
+    111					     mov SI,BX
+    112					     pop BX
+    113					     mov AX, arr_elem
+    114					     cwd
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 3
+lab8.asm
+
+
+
+    115					     imul arr_elem
+    116					     cwd
+    117					     mov arr_elem,AX
+    118					     xor AX,AX
+    119					     push BX
+    120				       skip:
+    121					     pop BX
+    122					     pop CX
+    123					     pop SI
+    124					     add BX,10
+    125					     add SI,2
+    126					     loop cycle
+    127
+    128				     endm
+    129
+    130
+    131
+    132	0000			     .model small
+    133	0000			     .stack 100h
+    134
+    135
+    136	0000			     .data
+    137
+    138	0000  0001 0002	0003 0004 +  arr dw 1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25
+    139	      0005 0006	0007 0008 +
+    140	      0009 000A	000B 000C +
+    141	      000D 000E	000F 0010 +
+    142	      0011 0012	0013 0014 +
+    143	      0015 0016	0017 0018 +
+    144	      0019
+    145	0032  ????		     temp dw ?
+    146	0034  0D 0A 24		     CR_LF db 0dh,0ah, '$'
+    147	      =0005		     strn equ 5
+    148	      =0005		     clmn equ 5
+    149	      =	arr[BX][SI]	     arr_elem equ arr[BX][SI]
+    150
+    151
+    152	0037			     .code
+    153
+    154	0000			     First:
+    155				     init_Data
+1   156	0000  B8 0000s			     mov AX, @data
+1   157	0003  8E D8			     mov DS,AX
+    158				     print_Matrix
+1   159
+1   160	0005  33 F6			 xor SI,SI
+1   161	0007  33 C9			 xor CX,CX
+1   162	0009  B9 0005			 mov CX,strn
+1   163					 new_Line
+2   164	000C  BA 0034r			 mov DX,offset CR_LF
+2   165	000F  B4 09			 mov AH,09h
+2   166	0011  CD 21			 int 21h
+1   167	0013			     ??0000:
+1   168	0013  51			 push CX
+1   169	0014  B9 0005			 mov CX,clmn
+1   170	0017			     ??0001:
+1   171	0017  33 C0			 xor AX,AX
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 4
+lab8.asm
+
+
+
+1   172	0019  8B 84 0000r		 mov AX, arr+si
+1   173	001D  51			 push CX
+1   174	001E  3D 0000			 cmp AX,0
+1   175	0021  79 03			 jns ??0002
+1   176	0023  EB 1D 90			 jmp ??0003
+1   177	0026			     ??0002:
+1   178					 positive_Number
+2   179	0026  33 C9			     xor CX, CX
+2   180	0028  BB 000A			     mov BX, 10
+2   181	002B				     ??0005:
+2   182	002B  33 D2				     xor DX, DX
+2   183	002D  F7 F3				     div BX
+2   184	002F  52				     push DX
+2   185	0030  41				     inc CX
+2   186	0031  85 C0				     test AX, AX
+2   187	0033  75 F6				     jnz ??0005
+2   188	0035  B4 02				     mov AH, 02h
+2   189	0037				     ??0006:
+2   190	0037  5A				     pop DX
+2   191	0038  80 C2 30				     add DL, 30h
+2   192	003B  CD 21				     int 21h
+2   193	003D  E2 F8				     loop ??0006
+1   194	003F  EB 27 90			 jmp ??0004
+1   195	0042			     ??0003:
+1   196					 negative_Number
+2   197	0042  50			 push AX
+2   198	0043  B4 02			 mov AH, 02h
+2   199	0045  B2 2D			 mov DL, '-'
+2   200	0047  CD 21			 int 21h
+2   201	0049  58			 pop AX
+2   202	004A  F7 D8			 neg AX
+1   203					 positive_Number
+2   204	004C  33 C9			     xor CX, CX
+2   205	004E  BB 000A			     mov BX, 10
+2   206	0051				     ??0007:
+2   207	0051  33 D2				     xor DX, DX
+2   208	0053  F7 F3				     div BX
+2   209	0055  52				     push DX
+2   210	0056  41				     inc CX
+2   211	0057  85 C0				     test AX, AX
+2   212	0059  75 F6				     jnz ??0007
+2   213	005B  B4 02				     mov AH, 02h
+2   214	005D				     ??0008:
+2   215	005D  5A				     pop DX
+2   216	005E  80 C2 30				     add DL, 30h
+2   217	0061  CD 21				     int 21h
+2   218	0063  E2 F8				     loop ??0008
+1   219	0065  EB 01 90			 jmp ??0004
+1   220
+1   221	0068			     ??0004:
+1   222					 probil
+2   223	0068  B4 02			 mov AH, 02h
+2   224	006A  B2 20			 mov DL, ' '
+2   225	006C  CD 21			 int 21h
+1   226	006E  83 C6 02			 add SI,2
+1   227	0071  59			 pop CX
+1   228	0072  E2 A3			 loop ??0001
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 5
+lab8.asm
+
+
+
+1   229					 new_Line
+2   230	0074  BA 0034r			 mov DX,offset CR_LF
+2   231	0077  B4 09			 mov AH,09h
+2   232	0079  CD 21			 int 21h
+1   233	007B  59			 pop CX
+1   234	007C  E2 95			 loop ??0000
+    235				     task
+1   236
+1   237	007E  33 DB		     xor BX,BX
+1   238	0080  33 F6		     xor SI,SI
+1   239	0082  B9 0005		     mov CX,5
+1   240	0085			       ??0009:
+1   241	0085  56			     push SI
+1   242	0086  8B 80 0000r		     mov AX, arr_elem
+1   243	008A  89 0E 0032r		     mov temp,CX
+1   244	008E  51			     push CX
+1   245	008F  B9 0005			     mov CX, strn
+1   246	0092  2B 0E 0032r		     sub CX, temp
+1   247	0096  83 C1 01			     add CX,1
+1   248	0099  99			     cwd
+1   249	009A  F7 A8 0000r		     imul arr_elem
+1   250	009E  89 80 0000r		     mov arr_elem, AX
+1   251	00A2  53			     push BX
+1   252	00A3  BB 0003			     mov BX,3
+1   253	00A6  39 1E 0032r		     cmp temp,BX
+1   254	00AA  74 1D			     je	??000A
+1   255	00AC  8B 1E 0032r		     mov bx,temp
+1   256	00B0  83 EB 01			     sub BX,1
+1   257	00B3  03 DB			     add BX,BX
+1   258	00B5  8B F3			     mov SI,BX
+1   259	00B7  5B			     pop BX
+1   260	00B8  8B 80 0000r		     mov AX, arr_elem
+1   261	00BC  99			     cwd
+1   262	00BD  F7 A8 0000r		     imul arr_elem
+1   263	00C1  99			     cwd
+1   264	00C2  89 80 0000r		     mov arr_elem,AX
+1   265	00C6  33 C0			     xor AX,AX
+1   266	00C8  53			     push BX
+1   267	00C9			       ??000A:
+1   268	00C9  5B			     pop BX
+1   269	00CA  59			     pop CX
+1   270	00CB  5E			     pop SI
+1   271	00CC  83 C3 0A			     add BX,10
+1   272	00CF  83 C6 02			     add SI,2
+1   273	00D2  E2 B1			     loop ??0009
+1   274
+    275				     print_Matrix
+1   276
+1   277	00D4  33 F6			 xor SI,SI
+1   278	00D6  33 C9			 xor CX,CX
+1   279	00D8  B9 0005			 mov CX,strn
+1   280					 new_Line
+2   281	00DB  BA 0034r			 mov DX,offset CR_LF
+2   282	00DE  B4 09			 mov AH,09h
+2   283	00E0  CD 21			 int 21h
+1   284	00E2			     ??000B:
+1   285	00E2  51			 push CX
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 6
+lab8.asm
+
+
+
+1   286	00E3  B9 0005			 mov CX,clmn
+1   287	00E6			     ??000C:
+1   288	00E6  33 C0			 xor AX,AX
+1   289	00E8  8B 84 0000r		 mov AX, arr+si
+1   290	00EC  51			 push CX
+1   291	00ED  3D 0000			 cmp AX,0
+1   292	00F0  79 03			 jns ??000D
+1   293	00F2  EB 1D 90			 jmp ??000E
+1   294	00F5			     ??000D:
+1   295					 positive_Number
+2   296	00F5  33 C9			     xor CX, CX
+2   297	00F7  BB 000A			     mov BX, 10
+2   298	00FA				     ??0010:
+2   299	00FA  33 D2				     xor DX, DX
+2   300	00FC  F7 F3				     div BX
+2   301	00FE  52				     push DX
+2   302	00FF  41				     inc CX
+2   303	0100  85 C0				     test AX, AX
+2   304	0102  75 F6				     jnz ??0010
+2   305	0104  B4 02				     mov AH, 02h
+2   306	0106				     ??0011:
+2   307	0106  5A				     pop DX
+2   308	0107  80 C2 30				     add DL, 30h
+2   309	010A  CD 21				     int 21h
+2   310	010C  E2 F8				     loop ??0011
+1   311	010E  EB 27 90			 jmp ??000F
+1   312	0111			     ??000E:
+1   313					 negative_Number
+2   314	0111  50			 push AX
+2   315	0112  B4 02			 mov AH, 02h
+2   316	0114  B2 2D			 mov DL, '-'
+2   317	0116  CD 21			 int 21h
+2   318	0118  58			 pop AX
+2   319	0119  F7 D8			 neg AX
+1   320					 positive_Number
+2   321	011B  33 C9			     xor CX, CX
+2   322	011D  BB 000A			     mov BX, 10
+2   323	0120				     ??0012:
+2   324	0120  33 D2				     xor DX, DX
+2   325	0122  F7 F3				     div BX
+2   326	0124  52				     push DX
+2   327	0125  41				     inc CX
+2   328	0126  85 C0				     test AX, AX
+2   329	0128  75 F6				     jnz ??0012
+2   330	012A  B4 02				     mov AH, 02h
+2   331	012C				     ??0013:
+2   332	012C  5A				     pop DX
+2   333	012D  80 C2 30				     add DL, 30h
+2   334	0130  CD 21				     int 21h
+2   335	0132  E2 F8				     loop ??0013
+1   336	0134  EB 01 90			 jmp ??000F
+1   337
+1   338	0137			     ??000F:
+1   339					 probil
+2   340	0137  B4 02			 mov AH, 02h
+2   341	0139  B2 20			 mov DL, ' '
+2   342	013B  CD 21			 int 21h
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 7
+lab8.asm
+
+
+
+1   343	013D  83 C6 02			 add SI,2
+1   344	0140  59			 pop CX
+1   345	0141  E2 A3			 loop ??000C
+1   346					 new_Line
+2   347	0143  BA 0034r			 mov DX,offset CR_LF
+2   348	0146  B4 09			 mov AH,09h
+2   349	0148  CD 21			 int 21h
+1   350	014A  59			 pop CX
+1   351	014B  E2 95			 loop ??000B
+    352				     end_Prog
+1   353	014D  B8 4C00			     mov AX, 4c00h
+1   354	0150  CD 21			     int 21h
+1   355
+    356				     end First
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 8
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??0000				  Near	 _TEXT:0013
+??0001				  Near	 _TEXT:0017
+??0002				  Near	 _TEXT:0026
+??0003				  Near	 _TEXT:0042
+??0004				  Near	 _TEXT:0068
+??0005				  Near	 _TEXT:002B
+??0006				  Near	 _TEXT:0037
+??0007				  Near	 _TEXT:0051
+??0008				  Near	 _TEXT:005D
+??0009				  Near	 _TEXT:0085
+??000A				  Near	 _TEXT:00C9
+??000B				  Near	 _TEXT:00E2
+??000C				  Near	 _TEXT:00E6
+??000D				  Near	 _TEXT:00F5
+??000E				  Near	 _TEXT:0111
+??000F				  Near	 _TEXT:0137
+??0010				  Near	 _TEXT:00FA
+??0011				  Near	 _TEXT:0106
+??0012				  Near	 _TEXT:0120
+??0013				  Near	 _TEXT:012C
+??DATE				  Text	 "06/04/22"
+??FILENAME			  Text	 "lab8	  "
+??TIME				  Text	 "13:28:08"
+??VERSION			  Number 030A
+@32BIT				  Text	 0
+@CODE				  Text	 _TEXT
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _TEXT
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 LAB8
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 2
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+ARR				  Word	 DGROUP:0000
+ARR_ELEM			  Text	 arr[BX][SI]
+CLMN				  Number 0005
+CR_LF				  Byte	 DGROUP:0034
+FIRST				  Near	 _TEXT:0000
+STRN				  Number 0005
+TEMP				  Word	 DGROUP:0032
+
+Macro Name
+
+END_PROG
+INIT_DATA
+NEGATIVE_NUMBER
+NEW_LINE
+POSITIVE_NUMBER
+PRINT_MATRIX
+PROBIL
+TASK
+Turbo Assembler	 Version 3.1	    06/04/22 13:28:08	    Page 9
+Symbol Table
+
+
+
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  STACK				  16  0100 Para	  Stack	  STACK
+  _DATA				  16  0037 Word	  Public  DATA
+_TEXT				  16  0152 Word	  Public  CODE
+
