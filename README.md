@@ -4,7 +4,6 @@
    <img src="https://media.giphy.com/media/8D2KdBOaS12nQBjkAv/giphy.gif" width="300"  />
 </div>
 <br>
-<br>
 
 ---
 
