@@ -30,36 +30,36 @@
 <td align="center">1</td>
 <td align="center"><img src ="https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=c&logoColor=white"></td>
 <td align="center">Алгоритмізація та програмування I</a></td>
-<td align="center" ><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Reports">🥱</a></td>
-<td align="center" ><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Works">😵</a></td>
+<td align="center" title = "тицяй на смайлик" ><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Reports">🥱</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Works">😵</a></td>
 </tr>
 <tr>
 <td align="center">1</td>
 <td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
 <td align="center">Програмування алгоритмічних структур</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Reports">😎</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Works">😁</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Reports">😎</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Works">😁</a></td>
 </tr>
 <tr>
 <td align="center">2</td>
 <td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
 <td align="center">Алгоритмізація та програмування II</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Reports">😤</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Works/Cursach">🙄</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Reports">😤</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Works/Cursach">🙄</a></td>
 </tr>
 <tr>
 <td align="center">2</td>
 <td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
 <td align="center">Програмування складних алгоритмів</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Reports">👼</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Works">🥳</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Reports">👼</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Works">🥳</a></td>
 </tr>
 <tr>
 <td align="center">2</td>
 <td align="center"><img src ="https://img.shields.io/badge/TASM-%2300599C.svg?style=flat&logo=assemblyscript&logoColor=white"></td>
 <td align="center">Операційні системи</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Reports">☠</a></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Works">🤓</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Reports">☠</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Works">🤓</a></td>
 </tr>
 </tbody>
 </table>
