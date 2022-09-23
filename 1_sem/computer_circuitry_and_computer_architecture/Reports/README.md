@@ -1,90 +1,59 @@
-<div id="header" align="center">
-  <h1>KPI works</h1>
-
-   <img src="https://media.giphy.com/media/8D2KdBOaS12nQBjkAv/giphy.gif" width="300"  />
+<div>
+<ul>
+<li>Комп'ютерна схемотехніка та архітектура комп'ютерів</li>
+<li>Ковальов Микола Олександрович</li>
+<li>Загальна оцінка - 92/100</li>
+</ul>
 </div>
-<br>
 
----
-
-<p>У цьому репорзиторії предаставлені лабораторні, практичні, курсові, модульні-контрольні роботи з дисциплін, присвячених програмуванню</p>
-
----
-
-<p><span>Спеціальність</span>: 122 (Комп'ютерні науки).<br>Освітня програма: Цифрові технології в енергетиці.<br>Університет: НТУУ "КПІ ім. Ігоря Сікорського".<br>Інститут: ІАТЕ</p>
-
----
 
 <table >
 <thead>
 <tr>
-<th>Семестр</th>
-<th>Варіант</th>
-<th>Мова програмування</th>
-<th>Дисципліна</th>
+<th>Робота</th>
+
+<th>Оцінка</th>
 <th >Посилання на звіти</th>
-<th>Посилання на роботи</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="center">1</td>
-<td align="center">17</td>
-<td align="center"><img src ="https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=c&logoColor=white"></td>
-<td align="center">Алгоритмізація та програмування I</a></td>
-<td align="center" title = "тицяй на смайлик" ><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Reports">🥱</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Works">😵</a></td>
+<td align="center">Лабораторна робота №1</td>
+<td align="center">9,6</td>
+<td align="center"><a href = "https://github.com/karkuh/KPI_works/blob/master/1_sem/computer_circuitry_and_computer_architecture/Reports/%D0%9B%D0%A0_1_%D0%A2%D0%A0_12_%D0%9A%D0%B0%D1%80%D0%BA%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0.docx">😎</td>
+
 </tr>
 <tr>
-<td align="center">1</td>
-<td align="center">17</td>
-<td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
-<td align="center">Програмування алгоритмічних структур</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Reports">😎</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Works">😁</a></td>
+<td align="center">Лабораторна робота №2</td>
+<td align="center">8</td>
+<td align="center"><a href = "https://github.com/karkuh/KPI_works/blob/master/1_sem/computer_circuitry_and_computer_architecture/Reports/%D0%9B%D0%A0_2_%D0%A2%D0%A0_12_%D0%9A%D0%B0%D1%80%D0%BA%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0.docx">☹</td>
+
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">15</td>
-<td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
-<td align="center">Алгоритмізація та програмування II</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Reports">😤</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Works/Cursach">🙄</a></td>
+<td align="center">Лабораторна робота №3</td>
+<td align="center">10</td>
+<td align="center"><a href = "https://github.com/karkuh/KPI_works/blob/master/1_sem/computer_circuitry_and_computer_architecture/Reports/%D0%9B%D0%A0_3_%D0%A2%D0%A0_12_%D0%9A%D0%B0%D1%80%D0%BA%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0.docx">🤩</td>
+
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">15</td>
-<td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
-<td align="center">Програмування складних алгоритмів</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Reports">👼</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Works">🥳</a></td>
+<td align="center">Лабораторна робота №4</td>
+<td align="center">7,2</td>
+<td align="center"><a href = "https://github.com/karkuh/KPI_works/blob/master/1_sem/computer_circuitry_and_computer_architecture/Reports/%D0%9B%D0%A0_4_%D0%A2%D0%A0_12_%D0%9A%D0%B0%D1%80%D0%BA%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0.docx">😢</td>
+
 </tr>
 <tr>
-<td align="center">2</td>
-<td align="center">15</td>
-<td align="center"><img src ="https://img.shields.io/badge/TASM-%2300599C.svg?style=flat&logo=assemblyscript&logoColor=white"></td>
-<td align="center">Операційні системи</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Reports">☠</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Works">🤓</a></td>
+<td align="center">Лабораторна робота №5</td>
+<td align="center">10</td>
+<td align="center"><a href = "https://github.com/karkuh/KPI_works/blob/master/1_sem/computer_circuitry_and_computer_architecture/Reports/%D0%9B%D0%A0_5_%D0%A2%D0%A0_12_%D0%9A%D0%B0%D1%80%D0%BA%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0.docx">🤩</td>
+
 </tr>
 <tr>
-<td align="center">3</td>
-<td align="center">16</td>
-<td align="center"><img src ="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white "><img src ="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white"><img src = "https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E"></td>
-<td align="center">Веб-технології та веб-дизайн</a></td>
-<td align="center" ></td>
-<td align="center" ></td>
-</tr>
-<tr>
-<td align="center">3</td>
-<td align="center">16</td>
-<td align="center"><img src ="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white"></td>
-<td align="center">Операційні системи UNIX</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/operating_systems/Reports">🤕</a></td>
-<td align="center" title = "тицяй на смайлик"></a></td>
+<td align="center">Модульна контрольна робота</td>
+<td align="center">9</td>
+<td align="center"><a href = "https://github.com/karkuh/KPI_works/blob/master/1_sem/computer_circuitry_and_computer_architecture/Reports/%D0%9C%D0%9A%D0%A0_%D0%9A%D0%B0%D1%80%D0%BA%D1%83%D1%88%D0%B5%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%A1%D1%85%D0%B5%D0%BC%D0%BE%D1%82%D0%B5%D1%85%D0%BD%D1%96%D0%BA%D0%B0.docx">😋</td>
+
 </tr>
 </tbody>
 </table>
-
 
 
