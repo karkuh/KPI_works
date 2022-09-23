@@ -80,7 +80,7 @@
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white"></td>
 <td align="center">Операційні системи UNIX</a></td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/operating_systems/Reports">🤕</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/unix_operating_system/Reports">🤕</a></td>
 <td align="center" title = "тицяй на смайлик"></a></td>
 </tr>
 </tbody>
