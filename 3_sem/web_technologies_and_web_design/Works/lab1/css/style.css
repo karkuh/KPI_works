@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+}
+
+[class*="__container"] {
+    max-width: 1170px;
+    margin: 0 auto;
+
+}
+
+header {
+    color: black;
+    width: 100%;
+    height: 710px;
+}
+
+.header__container {
+    text-align: center;
+}
+
+.header__logo {
+    font-family: 'Source Serif Pro', serif;
+}
+
+.header__navigation {
+    padding-bottom: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.nav__link {
+    display: inline-block;
+    margin: 0 15px;
+    color: black;
+    text-decoration: none;
+    transition: color .2s linear;
+}
+
+.nav__link:hover {
+    color: rgb(4, 133, 38);
+}
+
+hr{
+    margin-top: 10px;
+}
+
+main {
+    font-size: 18px;
+}
+
+
+main h3 {
+    font-family: 'Source Serif Pro', serif;
+    text-align: center;
+    font-size: 30px;
+}
+
+[class*="infoAnd"] {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.biography__photo {
+    margin-left: 50px;
+}
+
+.harlem__photo {
+    margin-right: 50px;
+}
+
+
+
+
+table {
+    width: 1170px;
+    height: 300px;
+    text-align: center;
+}
+
+table,
+th,
+td {
+    border: 1px solid;
+    border-width: 2px;
+}
+
+footer { 
+    margin: 0 auto;                              
+    background-color: black;
+    color: whitesmoke;
+    height: 150px;
+}
+
+
+
+  .footer__social_networks i {
+    padding: 10px;
+  }
+  .footer__social_networks a:nth-child(2) {
+    color: #db100c;
+  }
+  .footer__social_networks a:nth-child(3) {
+    color: #db11e5;
+                                     
+  }
+  .footer__social_networks a:nth-child(4) {
+    color: #3eb9e6;
+  }
+  .footer__social_networks a:nth-child(5) {
+    color: #42599d;
+  }
+  
+ .footer__container {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__contact_information{
+    padding-top: 40px;
+
+}
+.fooetr__link{
+    color: white;
+    text-decoration: none;
+}
