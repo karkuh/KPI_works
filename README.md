@@ -31,7 +31,7 @@
 <td align="center">1</td>
 <td align="center">17</td>
 <td align="center"><img src ="https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=c&logoColor=white"></td>
-<td align="center">Алгоритмізація та програмування I</td>
+<td align="center">Алгоритмізація та програмування I</a></td>
 <td align="center" title = "тицяй на смайлик" ><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Reports">🥱</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Works">😵</a></td>
 </tr>
@@ -39,7 +39,7 @@
 <td align="center">1</td>
 <td align="center">17</td>
 <td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
-<td align="center">Програмування алгоритмічних структур</td>
+<td align="center">Програмування алгоритмічних структур</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Reports">😎</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Works">😁</a></td>
 </tr>
@@ -47,7 +47,7 @@
 <td align="center">2</td>
 <td align="center">15</td>
 <td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
-<td align="center">Алгоритмізація та програмування II</td>
+<td align="center">Алгоритмізація та програмування II</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Reports">😤</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/algorithmization_and_programming(II)/Works/Cursach">🙄</a></td>
 </tr>
@@ -55,7 +55,7 @@
 <td align="center">2</td>
 <td align="center">15</td>
 <td align="center"><img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></td>
-<td align="center">Програмування складних алгоритмів</td>
+<td align="center">Програмування складних алгоритмів</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Reports">👼</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/programming_complex_algorithms/Works">🥳</a></td>
 </tr>
@@ -63,7 +63,7 @@
 <td align="center">2</td>
 <td align="center">15</td>
 <td align="center"><img src ="https://img.shields.io/badge/TASM-%2300599C.svg?style=flat&logo=assemblyscript&logoColor=white"></td>
-<td align="center">Операційні системи</td>
+<td align="center">Операційні системи</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Reports">☠</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Works">🤓</a></td>
 </tr>
@@ -71,17 +71,17 @@
 <td align="center">3</td>
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white "><img src ="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white"><img src = "https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E"></td>
-<td align="center">Веб-технології та веб-дизайн</td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/web_technologies_and_web_design/Reports">🤩</td>
-<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/web_technologies_and_web_design/Works">👨‍💻</a></td>
+<td align="center">Веб-технології та веб-дизайн</a></td>
+<td align="center" ></td>
+<td align="center" ></td>
 </tr>
 <tr>
 <td align="center">3</td>
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white"></td>
-<td align="center">Операційні системи UNIX</td>
+<td align="center">Операційні системи UNIX</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/unix_operating_system/Reports">🤕</a></td>
-<td align="center" title = "немає робіт">🤷‍♂️</td>
+<td align="center" title = "тицяй на смайлик"></a></td>
 </tr>
 </tbody>
 </table>
