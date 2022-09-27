@@ -31,7 +31,7 @@
 <td align="center">1</td>
 <td align="center">17</td>
 <td align="center"><img src ="https://img.shields.io/badge/C-%2300599C.svg?style=flat&logo=c&logoColor=white"></td>
-<td align="center">Алгоритмізація та програмування I</a></td>
+<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)">Алгоритмізація та програмування I</a></td>
 <td align="center" title = "тицяй на смайлик" ><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Reports">🥱</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/algorithmization_and_programming(I)/Works">😵</a></td>
 </tr>
