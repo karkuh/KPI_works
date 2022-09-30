@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+        <div class="header__container">
+
+
+            <nav class="header__navigation">
+                <a href="#signUp" class="nav__link">Форма реєстрації</a>
+                <a href="#logIn" class="nav__link">Форма входу</a>
+                <a href="#feedBack" class="nav__link">Форма зворотнього зв'язку</a>
+
+            </nav>
+
+            <div class="header__logo">
+                <img src="./images/logo.jpg" alt="logo" class="logo__photo">
+            </div>
+
+
+
+        </div>
+    </header>
+
+    <hr color="purple">
+
+
+    <main>
+
+        <section class="main__introduction">
+
+            <div class="introduction__container">
+
+                <div class="introduction__text">
+
+
+                    <p><img src="./images/photo1.jpg" alt="photo1" width="150px" height="300px" class="photo1">Need for Speed ​​Heat  - це гоночна гра у відкритому світі під назвою Палм-Сіті. У цій грі гонки поділяються на нічні, за які можна отримати репутацію для підвищення рівня та легальні денні перегони, під час яких можна заробити гроші на покупку машин та покращень. Після кожної нічної гонки підвищуватиметься рівень погоні і гравцеві ставатиме все складніше йти від поліції. Рівень погоні можна підвищувати проїжджаючи радари, проходячи змагання на стрибки та розбиваючи поліцейських машини.</p>
+                    <p><img src="./images/photo2.jpg" alt="photo1" width="200px" height="140px" class="photo2">
+                        Місцеве відділення поліції втомилося від постійного вуличного свавілля, тож обзавелося крутими машинами та злими копцями. Ті із задоволенням відловлюють та карають гонщиків. Найбезбашенніші представники влади навіть люблять познущатися з стритрейсерів, але є такі, які візьмуть хабар і відпустять. Описані вище стосунки поліції та гонщиків перенесли у геймплей Need for Speed ​​Heat. 
+                       </p>
+                    <img src="https://media.giphy.com/media/elJ5IaOcpGvYyWkplJ/giphy-downsized-large.gif" alt="photo1"
+                        width="350px" height="150px" class="photo3__1">
+                    <img src="https://media.giphy.com/media/3oKIPfc8vCRvHiu0F2/giphy.gif" alt="photo1" width="350px"
+                        height="150px" class="photo3__2">
+
+
+
+
+
+                </div>
+
+                <div class="introduction__photo">
+                    <img src="https://i.pinimg.com/originals/08/33/4c/08334ce44a530ce81ba2ff9e5d29064b.gif" alt="photo1"
+                        width="270px" height="200px" class="photo4">
+                    <img src="https://i.pinimg.com/originals/08/33/4c/08334ce44a530ce81ba2ff9e5d29064b.gif" alt="photo1"
+                        width="270px" height="200px" class="photo5">
+                    <img src="https://i.pinimg.com/originals/08/33/4c/08334ce44a530ce81ba2ff9e5d29064b.gif" alt="photo1"
+                        width="270px" height="200px" class="photo6">
+                </div>
+
+
+
+            </div>
+
+
+
+
+        </section>
+
+
+        <hr color="purple">
+
+        <section class="main__formSignUp">
+
+            <div class="formSignUp__container">
+
+                <div class="formSignUp__title">
+                    <h2 id="signUp">Форма реєстрації</h2>
+                </div>
+
+                <div class="formSignUp__border">
+                    <form class="form">
+                    <div class="formSignUp__area__left">
+
+
+
+                        
+                            <img src="./images/photo_login.jpg" alt="photo_login" class="photo_login">
+                            <br><br>
+                            Ім’я:<br>
+                            <input class="input__all" type='text' name='firstname' placeholder="Ім’я"><br><br>
+                            Прізвище:<br>
+                            <input class="input__all" type='text' name='lastname' placeholder="Прізвище"><br><br>
+                            Стать: <br>
+                            <label for="pick1"><input type="radio" name="pick" id="pick1"> Чоловіча </label>
+                            <label for="pick2"><input type="radio" name="pick" id="pick2"> Жіноча </label>
+                            <br><br>
+                            Вік: <input class="input__age"  type="number" value="18" max="100" min="1" step="1">
+                            <br><br><br>
+                            Дата народження:
+                            <input class="input__date" type="date">
+                            <br><br>
+                            <input class="button__1" type="reset" value="Відмінна"
+                                onclick="alert('Реєстрація відміненна(')">
+                        
+
+
+                    </div>
+
+                    <div class="formSignUp__area__right">
+
+                            Країна проживання
+                            <br>
+                            <input class="input__all" list="countres" placeholder="Оберіть країну проживання">
+                            <datalist id="countres">
+                                <option value="Україна">
+                                <option value="Польща">
+                                <option value="Італія">
+                                <option value="Швеція">
+                                <option value="Ірландія">
+                            </datalist>
+
+                            <br><br>
+                            Номер телефону
+                            <br>
+                            <input class="input__all" type="tel" placeholder="+380930000000">
+                            <br><br>
+                            Електронна пошта
+                            <br>
+                            <input class="input__all" type="email" placeholder="Ел. пошта"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <br><br>
+                            Пароль
+                            <br>
+                            <input class="input__all" type="password" size="6" placeholder="Пароль"><br>
+                            <br>
+                            <label><input type="checkbox"> Чи згодні ви з умовами?</label>
+                            <br><br>
+                            <input class="button__2" type="submit" value="Зареєструватися"
+                                onclick="alert('Вітаю, ви зареєструвалися!')">
+                        
+
+                    </div>
+                </form>
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <hr color="purple">
+
+        <section
+         class="main__formLogIn">
+
+            <div class="formLogIn__container">
+
+                <div class="formLogIn__title">
+                    <h2 id="logIn">Форма входу</h2>
+                </div>
+
+                <div class="formLogIn__border">
+
+                    <div class="formLogIn__area">
+                        <form class="form">
+                        <input class="input__all" type='text' name='login' placeholder="Логін"><br><br>
+                        <input class="input__all" type="password" size="6" placeholder="Пароль"><br><br>
+                        <input class="button__3" type="submit" value="Вхід" onclick="alert('Ви увійшли в обліковий запис!')">
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+        ​
+        <hr color="purple">
+
+        <section class="main__formFeedBack">
+                
+            <div class="formFeedBack__container">
+
+                <div class="formFeedBack__title">
+                    <h2 id="feedBack">Форма зворотнього зв'язку</h2>
+                </div>
+
+                <div class="formFeedBack__border">
+
+                    <div class="formFeedBack__area__left">
+
+                        <form class="form">
+
+                            
+                            <input class="input__all" type='text' name='firstname' placeholder="Ім'я"><br><br>
+                            
+                            <input class="input__all" type="email" placeholder="Ел. пошта"
+                                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+                            <br><br>
+                           
+                            <input class="input__all" list="problems" placeholder="Тема повідомлення">
+                            <datalist id="problems">
+                                <option value="Помилка в коді">
+                                <option value="Неправильно підібраний дизайн">
+                                <option value="Проблема з входом в обліковий запис">
+                                <option value="Забули пароль">
+                                <option value="Інше">
+                            </datalist>
+                            <br><br>
+                            <input class="button__4" type="submit" value="Відправити" onclick="alert('Ви відправили повідомлення!')">
+                        </form>
+                    </div>
+
+                    <div class="formFeedBack__area__right">
+
+                        
+                        <textarea placeholder="Повідомлення" 
+                        id="w3mission" rows="16" cols="50" wrap="soft" >   
+                        </textarea>
+
+                        
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <footer>
+
+        <div class="footer__area">
+
+            <div class="footer__container">
+                <div class="footer__social_networks">
+                    <h1>Соціальні мережі</h1>
+                    <a target="_blank" href="https://www.youtube.com/c/SmooveUkraine"><i
+                            class="fa fa-3x fa-youtube"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/smooveukraine/"><i
+                            class="fa fa-3x fa-instagram"></i></a>
+                    <a target="_blank" href="https://t.me/smooveukraine"><i class="fa fa-3x fa-telegram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/SmooveUkraine"><i
+                            class="fa fa-3x fa-facebook-square"></i></a>
+                </div>
+
+                <div class="footer__else">
+                    <p>Підготував студент групи ТР-12 <br>
+                        Каркушевський Владислав <br>
+                        email: <a target="_blank" href="mailto:karkushevskiy.vladyslav@lll.kpi.ua" class="footer__link">karkushevskiy.vladyslav@lll.kpi.ua</a> <br>
+                        telegram: <a target="_blank" href="https://t.me/vlad_karkushevskiy" class="footer__link">vlad_karkushevskiy</a>
+                        </p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
