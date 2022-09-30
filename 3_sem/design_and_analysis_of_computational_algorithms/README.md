@@ -1,10 +1,10 @@
-<h1><b>Алгоритмізація та програмування I</b></h1>
+<h1><b>Проектування та аналіз обчислювальних алгоритмів</b></h1>
  <p>
  <ul> 
   <li>Викладач:<ul>
     <li>Практик: Крячок О.С.</li>
     </ul> </li>
-  <li>Мова програмування: <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" align="center"></li>
+  <li>Мова програмування: <img src ="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"  align="center"></li>
 
   </ul>
   </p>
