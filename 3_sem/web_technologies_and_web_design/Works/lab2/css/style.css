@@ -22,8 +22,6 @@ body {
     width: 100%;
     height: 510px;
     border-radius: 5%;
-    
-    
 }
 
 
@@ -31,15 +29,12 @@ body {
 .header__navigation{
     position: relative;
     top: 50px;
-    
     float: right;
     font-size: 17px;
     text-transform: uppercase;
-    
 }
 
-.nav__link {
-   
+.nav__link {  
     display: inline-block;
     margin: 0 15px;
     color: #fff;
@@ -51,34 +46,51 @@ body {
     color: purple;
 }
 
+hr{        
+    clear:both;
+    margin: 20px 0 20px 0;
+}
+
+
+h2{
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.introduction__text {
+    width:60%;
+    height: 600px;  
+    float:left; }
+
+.introduction__photo { 
+    width:40%; 
+    height:560px; 
+    float:left 
+}
+
 .photo1{
     margin:  10px 15px 10px 15px;
     float: left;
-    
-    
 }
 
 .photo2{
     margin:  10px 15px 10px 15px;
-    float: right;
-    
-    
+    float: right; 
 }
 
-.photo3__1{
+.photo3{
     float: left;
-    margin-top:   15px ;
+    margin-top: 15px ;
 }
 
-.photo3__2{
+.photo3{
     float: left;
-    margin-top:   15px ;
+    margin-top:  5px ;
 }
 
 .photo4{
     position: relative;
-    left: 20px;
-    
+    left: 20px;   
 }
 .photo5{
 position: relative;
@@ -92,64 +104,31 @@ position: relative;
     left: 220px;
 }
 
-.introduction__text {
-
-    width:60%;
-    height: 600px;  
-    float:left; }
-.introduction__photo { 
-    width:40%; 
-    height:560px; 
-    float:left }
-
-    hr{
-        
-        clear:both;
-        margin: 20px 0 20px 0;
-    }
-
-
-    h2{
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-
-
 .formSignUp__border{
-
     margin: 0 auto;
     border-radius: 40%;
     border: 2px solid purple; 
     width: 70%;
-    height: 600px;  
-    
-
-
+    height: 600px;     
 }
 
 
 .formSignUp__area__left{
-
     width: 50%;
     float: left;
 }
 
-.formSignUp__area__right{
-    
+.formSignUp__area__right{   
     margin-top: 147px;
     width: 50%;
     float: right; 
 }
 
 
-.photo_login{
-   
+.photo_login{  
     margin-top: 20px;
     border-radius: 50%;
-    width: 100px;
-    
-
+    width: 100px;   
 }
 
 .form{
@@ -160,30 +139,23 @@ position: relative;
     width:170px;
     height:30px
 }
-.input__date{
-   
+.input__date{   
     height:30px
 }
 
 .input__all{
-
     width:200px;
-    height:30px
- 
+    height:30px 
 }
     
-
-.button__1{
-    
+.button__1{   
     margin-right: 30px;
     float: right;
     padding: 15px 60px;
     background-color: red;
-
 }
 
-.button__2{
-   
+.button__2{  
     margin-left: 30px;
     float: left;
     padding: 15px 32px;
@@ -191,12 +163,10 @@ position: relative;
 }
 
 .button__1,.button__2
- {
-    
+ {   
     color: white;
     text-align: center;
-    font-size: 16px;
-    
+    font-size: 16px;   
 }
 
 
@@ -205,22 +175,16 @@ position: relative;
     border-radius: 40%;
     border: 2px solid purple; 
     width: 40%;
-    height: 200px;  
-    
+    height: 200px;    
 }
 
 .formLogIn__area{
-
-
     margin-top: 20px;
     text-align: center;
-    
-     
 }
 
 
-.button__3,.button__4{
-   
+.button__3,.button__4{  
     font-size: 16px;
     color: #fff;
     padding: 15px 32px;
@@ -229,18 +193,15 @@ position: relative;
 
 
 .formFeedBack__border{
-
     margin: 0 auto;
     border-radius: 40%;
     border: 2px solid purple; 
     width: 70%;
-    height: 400px;  
-    
+    height: 400px;     
 }
 
 
 .formFeedBack__area__left{
-
     margin-top: 100px;
     width: 40%;
     float: left;
@@ -254,10 +215,10 @@ position: relative;
 
 
 .footer__area{
-width: 100%;
-height:270px;
-background-color: rgb(40, 2, 44);
-margin-top: 50px;
+    width: 100%;
+    height:270px;
+    background-color: rgb(40, 2, 44);
+    margin-top: 50px;
 }
 
 .footer__social_networks{
@@ -265,8 +226,7 @@ margin-top: 50px;
     margin-top: 50px;
     float: left;
     width: 30%;
-    height: 150px;
-    
+    height: 150px;   
 }
 
 .footer__else{
@@ -274,24 +234,25 @@ margin-top: 50px;
     padding: 100px 10px 20px 10px;
     float: right;
     width: 50%;
-    height: 100px;
-   
+    height: 100px;  
 }
 
 .footer__social_networks i {
-
     padding: 10px;
   }
+
   .footer__social_networks a:nth-child(2) {
     color: #db100c;
   }
+
   .footer__social_networks a:nth-child(3) {
-    color: #db11e5;
-                                     
+    color: #db11e5;                                    
   }
+
   .footer__social_networks a:nth-child(4) {
     color: #3eb9e6;
   }
+  
   .footer__social_networks a:nth-child(5) {
     color: #42599d;
   }
