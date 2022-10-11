@@ -265,3 +265,10 @@ public Game(string nameGame)
 </ol>
 
 <h3 id="6">---------Screenshots---------</h3>
+
+<img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/1.jpg">
+<img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/2.jpg">
+<img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/3.jpg">
+<img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/4.jpg">
+<img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/5.jpg">
+<img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/6.jpg">
