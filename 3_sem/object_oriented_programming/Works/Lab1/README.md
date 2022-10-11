@@ -262,7 +262,7 @@ public Game(string nameGame)
 <ol>
   <li>Для генерації ID використовується GUID</li>
   <li>Реалізований різнобарвний вивід у консоль</li>
-</ol>
+</ol><br>
 
 <h3 id="6">---------Screenshots---------</h3>
 
