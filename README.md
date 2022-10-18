@@ -98,7 +98,7 @@
 <td align="center">3</td>
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/c%23-%23239120.svg?style=flag&logo=c-sharp&logoColor=white"></td>
-<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/design_and_analysis_of_computational_algorithms">Об'єктно-орієнтоване програмування</a></td>
+<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/object_oriented_programming">Об'єктно-орієнтоване програмування</a></td>
 <td align="center" title = "нема, нашо тицяєш">🤷‍♂️</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/object_oriented_programming/Works">🎁</a></td>
 </tr>
