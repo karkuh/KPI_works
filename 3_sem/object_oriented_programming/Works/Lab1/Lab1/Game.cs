@@ -1,25 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace Lab1
 {
     public class Game
     {
-        Random rnd = new Random();
-
-        private int GamesCount;
-        private StringBuilder InfoGames;
-        private string NameGame;
-        private Dictionary<GameAccount, int> Players;
+        private readonly Random _random = new Random();
+        
+        private List<GameHistory> Results { get; }
+        private string NameGame{get; }
+        private Dictionary<GameAccount, int> Players {get; }
 
 
         public Game(string nameGame)
         {
             NameGame = nameGame;
-            InfoGames = new StringBuilder();
+            Results = new List<GameHistory>();
             Players = new Dictionary<GameAccount, int>();
 
             Console.ForegroundColor = ConsoleColor.Green;
@@ -32,12 +30,16 @@ namespace Lab1
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\t\t\t\t\t\t      Stats about " + NameGame);
-            Console.WriteLine("\t\t\t\t\t\t      Games count: " + GamesCount);
+            Console.WriteLine("\t\t\t\t\t\t      Games count: " + Results.Count);
             Console.ForegroundColor = ConsoleColor.Cyan;
             Console.WriteLine("\t\t\t____________________________________________________________________________\n" +
                               "\t\t\t|  ID  |       |    PLAYERS   |       |RATING GAME|       |     RESULT     |\n" +
                               "\t\t\t----------------------------------------------------------------------------");
-            Console.Write(InfoGames);
+            foreach (var result in Results)
+            {
+                Console.WriteLine(
+                    $"\t\t\t|{result.Id,6}|  -->  |{result.Player1.UserName,5} VS {result.Player2.UserName,-5}|  -->  |     {result.Rating}     |  -->  |{result.Player1.UserName,5} {result.Outcome,-4} {result.Player2.UserName,-5}|");
+            }
             Console.WriteLine("\t\t\t----------------------------------------------------------------------------");
             Console.ResetColor();
         }
@@ -92,7 +94,7 @@ namespace Lab1
 
         public void PlayingGame(GameAccount player1, GameAccount player2, int rating)
         {
-            var random = rnd.Next(1, 101);
+            var random = _random.Next(1, 101);
 
             Regex shabl = new Regex(@"\D");
             string id = shabl.Replace(Guid.NewGuid().ToString(), "").Substring(0, 6);
@@ -101,27 +103,21 @@ namespace Lab1
             {
                 player1.TieGame(NameGame,id, rating, player2);
                 player2.TieGame(NameGame,id, rating, player1);
-                InfoGames.Append(
-                    $"\t\t\t|{id,6}|  -->  |{player1.UserName,5} VS {player2.UserName,-5}|  -->  |     {rating}     |  -->  |{player1.UserName,5} {GameResult.TIE}  {player2.UserName,-5}|\n");
+                Results.Add(new GameHistory(id, player1, player2, rating, GameOutcome.TIE));
             }
             else if (random % 2 != 0)
             {
                 player1.WinGame(NameGame,id, rating, player2);
                 player2.LoseGame(NameGame,id, rating, player1);
-                InfoGames.Append(
-                    $"\t\t\t|{id,6}|  -->  |{player1.UserName,5} VS {player2.UserName,-5}|  -->  |     {rating}     |  -->  |{player1.UserName,5} {GameResult.WIN}  {player2.UserName,-5}|\n");
+                Results.Add(new GameHistory(id, player1, player2, rating, GameOutcome.WIN));
             }
             else
             {
                 player1.LoseGame(NameGame,id, rating, player2);
                 player2.WinGame(NameGame,id, rating, player1);
-                InfoGames.Append(
-                    $"\t\t\t|{id,6}|  -->  |{player1.UserName,5} VS {player2.UserName,-5}|  -->  |     {rating}     |  -->  |{player1.UserName,5} {GameResult.LOSE} {player2.UserName,-5}|\n");
+                Results.Add(new GameHistory(id, player1, player2, rating, GameOutcome.LOSE));
             }
-
-
-            GamesCount++;
-
+            
             AddPlayersToTop(player1);
             AddPlayersToTop(player2);
         }

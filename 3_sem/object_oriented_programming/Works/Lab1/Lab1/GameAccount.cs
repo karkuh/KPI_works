@@ -1,5 +1,6 @@
 ﻿using System;
-using System.Text;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Lab1
 {
@@ -7,21 +8,13 @@ namespace Lab1
     {
         public string UserName { get; }
         public int CurrentRating { get; private set; } = 1;
-        public int GamesCount { get; private set; }
-
-        private int WinCount;
-
-        private int LoseCount;
-
-        private int DrawCount;
-        private int Number = 1;
-
-        private StringBuilder InfoGames;
-
+        
+        private List<PlayerHistory> Results { get; }
+        
         public GameAccount(string userName)
         {
             UserName = userName;
-            InfoGames = new StringBuilder();
+            Results = new List<PlayerHistory>();
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine("\t\t\t\t\t\t<-- Створено гравця " + userName + " -->");
             Console.ResetColor();
@@ -36,13 +29,14 @@ namespace Lab1
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine("\t\t\t\t\t\t      Rating : " + CurrentRating);
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\t\t\t\t\t\t      All game : " + GamesCount);
+            Console.WriteLine("\t\t\t\t\t\t      All game : " + Results.Count);
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\t\t\t\t\t\t      Win game : " + WinCount);
+            Console.WriteLine("\t\t\t\t\t\t      Win game : " + Results.Count(x => x.Outcome == GameOutcome.WIN));
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("\t\t\t\t\t\t      Lose game : " + LoseCount);
+            Console.WriteLine("\t\t\t\t\t\t      Lose game : " + Results.Count(x => x.Outcome == GameOutcome.LOSE));
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("\t\t\t\t\t\t      Tie game : " + DrawCount + "\n");
+            Console.WriteLine("\t\t\t\t\t\t      Tie game : " + Results.Count(x => x.Outcome == GameOutcome.TIE) +
+                              "\n");
 
             Console.ResetColor();
         }
@@ -54,35 +48,42 @@ namespace Lab1
             Console.WriteLine("_________________________________________________________________________________________________________________\n" +
                               "| № |       |Name game|       |  ID  |       |RATING GAME|       |     RESULT     |       |CHANGE|       |RATING|\n" +
                               "-----------------------------------------------------------------------------------------------------------------");
-            Console.Write(InfoGames);
+            
+            foreach (var result in Results)
+            {
+                Console.WriteLine(
+                    $"|{PlayerHistory.Number,2} |  -->  |  {result.NameGame} |  -->  |{result.Id,6}|  -->  |     " +
+                    $"{result.Rating}     |  -->  |{UserName,5} {result.Outcome,-4} {result.Oponent.UserName,-5}|" +
+                    $"  -->  |{result.BeforeRating,2} {(result.Outcome == GameOutcome.LOSE ? "-" : "+")}{result.Rating,2}|" +
+                    $"  -->  |  {result.AfterRating,2}  |");
+                PlayerHistory.Number++;
+            }
+
+            PlayerHistory.Number = 1;
             Console.WriteLine("-----------------------------------------------------------------------------------------------------------------\n");
             Console.ResetColor();
         }
 
-        public void WinGame(string namegame,string id, int rating, GameAccount player)
+        public void WinGame(string nameGame,string id, int rating, GameAccount player)
         {
             if (rating < 0)
             {
                 throw new ArgumentException("rating < 0");
             }
 
-            int currentRating = CurrentRating;
+            int beforeRating = CurrentRating;
             CurrentRating += rating;
-            GamesCount++;
-            WinCount++;
-            InfoGames.Append(
-                $"|{Number,2} |  -->  |  {namegame} |  -->  |{id,6}|  -->  |     {rating}     |  -->  |{UserName,5} {GameResult.WIN}  {player.UserName,-5}|  -->  |{currentRating,2} +{rating,2}|  -->  |  {CurrentRating,2}  |\n");
-            Number++;
+            Results.Add(new PlayerHistory(nameGame, id, rating, GameOutcome.WIN, player, beforeRating, CurrentRating));
         }
 
-        public void LoseGame(string namegame,string id, int rating, GameAccount player)
+        public void LoseGame(string nameGame,string id, int rating, GameAccount player)
         {
             if (rating < 0)
             {
                 throw new ArgumentException("rating < 0");
             }
 
-            int currentRating = CurrentRating;
+            int beforeRating = CurrentRating;
 
 
             if (CurrentRating - rating < 1)
@@ -94,21 +95,13 @@ namespace Lab1
                 CurrentRating -= rating;
             }
 
-            GamesCount++;
-            LoseCount++;
-            InfoGames.Append(
-                $"|{Number,2} |  -->  |  {namegame} |  -->  |{id,6}|  -->  |     {rating}     |  -->  |{UserName,5} {GameResult.LOSE} {player.UserName,-5}|  -->  |{currentRating,2} -{rating,2}|  -->  |  {CurrentRating,2}  |\n");
-            Number++;
+            Results.Add(new PlayerHistory(nameGame, id, rating, GameOutcome.LOSE, player, beforeRating, CurrentRating));
         }
 
 
-        public void TieGame(string namegame,string id, int rating, GameAccount player)
+        public void TieGame(string nameGame,string id, int rating, GameAccount player)
         {
-            GamesCount++;
-            DrawCount++;
-            InfoGames.Append(
-                $"|{Number,2} |  -->  |  {namegame} |  -->  |{id,6}|  -->  |     {rating}     |  -->  |{UserName,5} {GameResult.TIE}  {player.UserName,-5}|  -->  |{CurrentRating,2} + 0|  -->  |  {CurrentRating,2}  |\n");
-            Number++;
+            Results.Add(new PlayerHistory(nameGame, id, rating, GameOutcome.TIE, player, CurrentRating, CurrentRating));
         }
 
 

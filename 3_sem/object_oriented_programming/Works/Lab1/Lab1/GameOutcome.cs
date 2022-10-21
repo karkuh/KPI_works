@@ -1,6 +1,6 @@
 ﻿namespace Lab1
 {
-    public enum GameResult
+    public enum GameOutcome
     {
         WIN,
         LOSE,

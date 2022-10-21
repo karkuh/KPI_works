@@ -5,3 +5,10 @@ C:\Users\User\RiderProjects\Lab1\Lab1\obj\Debug\Lab1.csproj.SuggestedBindingRedi
 C:\Users\User\RiderProjects\Lab1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
 C:\Users\User\RiderProjects\Lab1\Lab1\obj\Debug\Lab1.exe
 C:\Users\User\RiderProjects\Lab1\Lab1\obj\Debug\Lab1.pdb
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\bin\Debug\Lab1.exe
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\bin\Debug\Lab1.pdb
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\obj\Debug\Lab1.csproj.AssemblyReference.cache
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\obj\Debug\Lab1.csproj.SuggestedBindingRedirects.cache
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\obj\Debug\Lab1.csproj.CoreCompileInputs.cache
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\obj\Debug\Lab1.exe
+F:\GIT\KPI_works\3_sem\object_oriented_programming\Works\Lab1\Lab1\obj\Debug\Lab1.pdb
