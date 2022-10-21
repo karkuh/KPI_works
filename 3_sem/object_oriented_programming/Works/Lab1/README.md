@@ -36,12 +36,14 @@
   </ul>
 </p>
 <h3>Опис роботи:</h3>
-<h4><a href="#1">GameAccount</a><------><a href="#2">Game</a><------><a href="#3">GameResult</a><------><a href="#4">Program</a><------><a href="#5">Post scriptum</a><------><a href="#6">Screenshots</a></h4>
+<h4><a href="#1">GameAccount</a><------><a href="#2">PlayerHistory</a><------><a href="#3">Game</a><------><a href="#4">GameHistory</a><------><a href="#5">GameOutcome</a><------><a href="#6">Program</a><------><a href="#7">Screenshots</a></h4>
 <p>
 У цій програмі реалізовані такі класи:
     <ul>
     <li>GameAccount</li>
+    <li>PlayerHistory</li>
     <li>Game</li>
+    <li>GameHistory</li>
     <li>Program</li>
   </ul>
 Також реалізовано enum:
@@ -62,28 +64,14 @@
         
         public int CurrentRating { get; private set; } = 1;
         
-        public int GamesCount { get; private set; }
-
-        private int WinCount;
-
-        private int LoseCount;
-
-        private int DrawCount;
-        
-        private int Number = 1;
-
-        private StringBuilder InfoGames;
+        private List<PlayerHistory> Results { get; }
 ```
 
 <ul>
   <li>UserName - ім'я гравця</li>
   <li>CurrentRating - поточний рейтинг</li>
-  <li>GamesCount - кількість проведених ігор</li>
-  <li>WinCount - кількість виграних ігор</li>
-  <li>LoseCount - кількість програних ігор</li>
-  <li>DrawCount - кількість ігор зіграних у нічию</li>
-  <li>Number - числова змінна яка використовується при виводі інформації</li>
-  <li>InfoGames - історія ігор</li>
+  <li>Results - список історії ігор гравця</li>
+
 </ul>
 
 <p><br>У конструктор передається ім'я гравця</p>
@@ -117,7 +105,44 @@ public GameAccount(string userName)
 </ul><br>
 
 
-<h3 id="2">----------Game----------</h3>
+<h3 id="2">----------PlayerHistory----------</h3>
+  <p>
+  Цей клас реалізовано, для зберігання історії гри для гравця.<br>
+  У цьому класі доступні такі поля:
+</p>
+  
+  ```java
+        public static int Number = 1;
+
+        public string NameGame { get; }
+
+        public string Id { get; }
+
+        public int Rating { get; }
+
+        public GameOutcome Outcome { get; }
+
+        public GameAccount Oponent { get; }
+
+        public int BeforeRating { get; }
+
+        public int AfterRating { get; }
+        
+  ```
+  
+  <ul>
+  <li>Number - змінна для нумерування гри по порядку</li>
+  <li>NameGame - назва гри</li>
+  <li>Id - ідентифікатор гри </li>
+  <li>Rating - рейтинг гри</li>
+  <li>Outcome - результат гри</li>
+  <li>Oponent - опонент</li>
+  <li>BeforeRating - рейтинг до гри</li>
+  <li>AfterRating - рейтинг після гри</li>
+
+</ul><br>
+
+<h3 id="3">----------Game----------</h3>
 
 <p>
   Цей клас реалізовано, для створення нової гри.<br>
@@ -125,16 +150,14 @@ public GameAccount(string userName)
 </p>
 
 ```java
-        private int GamesCount;
-        private StringBuilder InfoGames;
-        private string NameGame;
-        private Dictionary<GameAccount, int> Players;
+        private string NameGame { get; }
+        private List<GameHistory> Results { get; }
+        private Dictionary<GameAccount, int> Players { get; }
 ```
 
 <ul>
-  <li>GamesCount - кількість зіграних партій у грі</li>
-  <li>InfoGames - історія ігор</li>
   <li>NameGame - назва гри</li>
+  <li>Results - список історії ігор </li>
   <li>Players - словник із гравцями та їхними поточними рейтингами</li>
 </ul>
 
@@ -169,7 +192,36 @@ public Game(string nameGame)
   
 </ul><br>
 
-<h3 id="3">----------GameResult----------</h3>
+<h3 id="4">----------GameHistory----------</h3>
+
+<p>
+  Цей клас реалізовано, для зберігання історії гри.<br>
+  У цьому класі доступні такі поля:
+</p>
+  
+  ```java
+        public string Id { get; }
+
+        public GameAccount Player1 { get; }
+
+        public GameAccount Player2 { get; }
+
+        public int Rating { get; }
+
+        public GameOutcome Outcome { get; }
+        
+  ```
+  
+  <ul>
+  <li>Id - ідентифікатор гри </li>
+  <li>Player1 - перший гравець</li>
+  <li>Player2 - другий гравець</li>
+  <li>Rating - рейтинг гри</li>
+  <li>Outcome - результат гри</li>
+</ul><br>
+
+
+<h3 id="5">----------GameOutcome----------</h3>
 
 <p>
   Цей enum містить у собі усі випадки результату гри.<br>
@@ -177,7 +229,7 @@ public Game(string nameGame)
 </p>
 
 ```java
-    public enum GameResult
+    public enum GameOutcome
     {
         WIN,
         LOSE,
@@ -191,7 +243,7 @@ public Game(string nameGame)
   <li>TIE - відповідає за нічию</li>
 </ul><br>
 
-<h3 id="4">----------Program----------</h3>
+<h3 id="6">----------Program----------</h3>
 
   Це головний клас, у якому викликається метод main.<br>
   На початку виводиться ASCII photo
@@ -257,14 +309,8 @@ public Game(string nameGame)
             game1.Top3();
 ```
 
-<h3 id="5">----------Post scriptum----------</h3>
 
-<ol>
-  <li>Для генерації ID використовується GUID</li>
-  <li>Реалізований різнобарвний вивід у консоль</li>
-</ol><br>
-
-<h3 id="6">---------Screenshots---------</h3>
+<h3 id="7">---------Screenshots---------</h3>
 
 <img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/1.jpg">
 <img src="https://github.com/karkuh/KPI_works/blob/master/3_sem/object_oriented_programming/Works/Lab1/screenshots/2.jpg">
