@@ -15,7 +15,7 @@
 
 ---
 
-<table >
+<table>
 <thead>
 <tr>
 <th>Семестр</th>
@@ -87,12 +87,11 @@
 <tr>
 <td align="center">3</td>
 <td align="center">16</td>
-<td align="center" title="я знаю що це не мова програмування🙄"><img src ="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white"></td><li>Розрахунок:<ul>
+<td align="center" title="я знаю що це не мова програмування🙄"><img src ="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white"></td>
 <td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/unix_operating_system">Операційні системи UNIX</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/unix_operating_system/Reports">🤕</a></td>
 <td align="center" title = "нема, нашо тицяєш">🤷‍♂️</a></td>
 </tr>
-
 <tr>
 <td align="center">3</td>
 <td align="center">16</td>
@@ -101,7 +100,6 @@
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/design_and_analysis_of_computational_algorithms/Reports">🤧</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/design_and_analysis_of_computational_algorithms/Works">🤤</a></td>
 </tr>
-
 <tr>
 <td align="center">3</td>
 <td align="center">16</td>
