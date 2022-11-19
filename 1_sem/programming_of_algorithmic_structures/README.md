@@ -3,9 +3,9 @@
  <ul> 
   <li>Викладачі:<ul>
     <li>Лектор: Барабаш О.В.</li>
-    <li>Лектор: Барабаш О.В.</li>
+    <li>Практик: Барабаш О.В.</li>
     </ul> </li>
-  <li>Мова програмування: <img src="https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white" align="center"></li>
+  <li>Мова програмування: <img src="https://img.shields.io/badge/Java-%23ED8B00.svg?style=flat&logo=coffeescript&logoColor=white"></li>
   <li>Оцінка: 98</li>
   </ul>
   </p>
