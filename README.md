@@ -71,7 +71,7 @@
 <td align="center">3</td>
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/html5-%23E34F26.svg?style=flat&logo=html5&logoColor=white "><img src ="https://img.shields.io/badge/css3-%231572B6.svg?style=flat&logo=css3&logoColor=white"><img src = "https://img.shields.io/badge/javascript-%23323330.svg?style=flat&logo=javascript&logoColor=%23F7DF1E"></td>
-<td align="center">Веб-технології та веб-дизайн</a></td>
+<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/web_technologies_and_web_design">Веб-технології та веб-дизайн</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/web_technologies_and_web_design/Reports">🤩</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/web_technologies_and_web_design/Works">👨‍💻</a></td>
 
@@ -80,7 +80,7 @@
 <td align="center">3</td>
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/Ubuntu-E95420?style=flat&logo=ubuntu&logoColor=white"></td>
-<td align="center">Операційні системи UNIX</a></td>
+<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/unix_operating_system">Операційні системи UNIX</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/unix_operating_system/Reports">🤕</a></td>
 <td align="center" title = "нема, нашо тицяєш">🤷‍♂️</a></td>
 </tr>
