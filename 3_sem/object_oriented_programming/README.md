@@ -16,6 +16,7 @@
  <ul> 
   <li>Лабораторні:<ul>
     <li><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/object_oriented_programming/Works/Lab1">Лабораторна №1</a></li>
+    <li><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/object_oriented_programming/Works/Lab2">Лабораторна №2</a></li>
   </ul>
     </ul>
   </p>
