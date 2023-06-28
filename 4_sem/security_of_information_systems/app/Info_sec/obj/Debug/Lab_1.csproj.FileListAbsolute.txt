@@ -1,0 +1,15 @@
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\bin\Debug\Lab_1.exe.config
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\bin\Debug\Lab_1.exe
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\bin\Debug\Lab_1.pdb
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.AssemblyReference.cache
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.Properties.Resources.resources
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.GenerateResource.cache
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.csproj.CoreCompileInputs.cache
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.exe
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.pdb
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.Forms.MainForm.resources
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.Forms.CodingFileForm.resources
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.Forms.PrintFileForm.resources
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.Forms.CreateFileForm.resources
+C:\Users\User\RiderProjects\Info_security\Lab_1\Lab_1\obj\Debug\Lab_1.Forms.RsaKeyGeneration.resources
