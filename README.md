@@ -51,6 +51,7 @@
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Reports">😎</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/1_sem/programming_of_algorithmic_structures/Works">😁</a></td>
 </tr>
+  <tr> <td colspan="6"></td></tr>
 <tr>
 <td align="center">2</td>
 <td align="center">15</td>
@@ -75,6 +76,7 @@
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Reports">☠</a></td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/2_sem/operating_systems/Works">🤓</a></td>
 </tr>
+  <tr> <td colspan="6"></td></tr>
 <tr>
 <td align="center">3</td>
 <td align="center">16</td>
@@ -105,8 +107,25 @@
 <td align="center">16</td>
 <td align="center"><img src ="https://img.shields.io/badge/c%23-%23239120.svg?style=flag&logo=c-sharp&logoColor=white"></td>
 <td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/object_oriented_programming">Об'єктно-орієнтоване програмування</a></td>
-<td align="center" title = "нема, нашо тицяєш">🤷‍♂️</a></td>
+<td align="center" title = "нема, нашо тицяєш">🤷‍♂️</td>
 <td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/3_sem/object_oriented_programming/Works">🎁</a></td>
+</tr>
+<tr> <td colspan="6"></td></tr>
+<tr>
+<td align="center">4</td>
+<td align="center">16</td>
+<td align="center"><img src ="https://img.shields.io/badge/mysql-%2300f.svg?style=flat&logo=mysql&logoColor=white"></td>
+<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/4_sem/databases">Системи баз даних</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/4_sem/databases/Reports">☺</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/4_sem/databases/Works">😜</a></td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">16</td>
+<td align="center"><img src ="https://img.shields.io/badge/c%23-%23239120.svg?style=flag&logo=c-sharp&logoColor=white"></td>
+<td align="center"><a href="https://github.com/karkuh/KPI_works/tree/master/4_sem/security_of_information_systems">Безпека інформаційних систем</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/4_sem/security_of_information_systems/Reports">🎈</a></td>
+<td align="center" title = "тицяй на смайлик"><a href="https://github.com/karkuh/KPI_works/tree/master/4_sem/security_of_information_systems/Works">🥃</a></td>
 </tr>
 </tbody>
 </table>
